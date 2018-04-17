@@ -46,7 +46,9 @@ namespace NasaRobot
             serverStream.Write(outStream, 0, outStream.Length);
             serverStream.Flush();
 
-
+            //TODO: have this recieve command back
+            //TODO: after recieving, compare to sent message to check for transmission errors
+            //TODO: implement timeout on recieving to ensure connection isnt lost
 
             //read back buffer. We were getting issues, so commented out for now
             /*byte[] inStream = new byte[99999];
