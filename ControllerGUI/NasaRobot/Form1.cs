@@ -14,15 +14,18 @@ namespace NasaRobot
     public partial class Form1 : Form
     {
         System.Net.Sockets.TcpClient sock = new TcpClient();
-        bool addValue = true;
+        bool addValue = true; //true if we're moving forward, false if we're going backwards
         int motorSpeed = 64;
         int actuatorSpeed = 64;
 
         public Form1()
         {
             InitializeComponent();
+
+            //default comboboxes to first item in collection
             cmbMotorSelect.SelectedIndex = 0;
             cmbActuatorSelect.SelectedIndex = 0;
+
             connectSocket();
         }
 
@@ -38,7 +41,7 @@ namespace NasaRobot
         {
             NetworkStream serverStream = sock.GetStream();
             //calculate actual value to pass to motor. value of 64 is stop, > 64 is forward, < 64 is backwards. range is 0-128
-            value = (value * ((addValue) ? 1 : -1)) + 64;
+            value = (value * ((addValue) ? 1 : -1)) + 64; 
             byte[] outStream = System.Text.Encoding.ASCII.GetBytes(deviceName + ", " + command + ", " + value + "\x04");
             serverStream.Write(outStream, 0, outStream.Length);
             serverStream.Flush();
@@ -109,7 +112,8 @@ namespace NasaRobot
 
         private void btnMotorStop_Click(object sender, EventArgs e)
         {
-            sendMessage(cmbMotorSelect.Text, "Stop", 64);
+            addValue = true;
+            sendMessage(cmbMotorSelect.Text, "Stop", 0); //the value here shouldnt matter as Stop is hardcoded in the board. But due to how the speed value is determined, passing in 0 will result in 64 being sent
         }
 
         private void btnReverse_Click(object sender, EventArgs e)
@@ -120,11 +124,13 @@ namespace NasaRobot
 
         private void btnLeft_Click(object sender, EventArgs e)
         {
+            addValue = true;
             sendMessage(cmbMotorSelect.Text, "Left", motorSpeed);
         }
 
         private void btnRight_Click(object sender, EventArgs e)
         {
+            addValue = true;
             sendMessage(cmbMotorSelect.Text, "Right", motorSpeed);
         }
         #endregion
@@ -187,6 +193,7 @@ namespace NasaRobot
 
         private void btnActuatorStop_Click(object sender, EventArgs e)
         {
+            addValue = true;
             sendMessage(cmbActuatorSelect.Text, "Up", actuatorSpeed);
         }
 
@@ -203,19 +210,14 @@ namespace NasaRobot
 
         #endregion
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+    
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void cmbMotorSelect_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //cmbMotorSelect.Text = "DriveMotor";
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
+            if (e.KeyChar == (32)) //if the spacebar is pressed. allows quicker stopping of motors
+            {
+                sendMessage(cmbMotorSelect.Text, "Stop", 64);
+            }
         }
     }
 }

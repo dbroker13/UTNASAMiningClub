@@ -112,7 +112,6 @@
             this.cmbMotorSelect.Name = "cmbMotorSelect";
             this.cmbMotorSelect.Size = new System.Drawing.Size(121, 21);
             this.cmbMotorSelect.TabIndex = 3;
-            this.cmbMotorSelect.SelectedIndexChanged += new System.EventHandler(this.cmbMotorSelect_SelectedIndexChanged);
             // 
             // btnRight
             // 
@@ -186,7 +185,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(399, 100);
             this.panel3.TabIndex = 13;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label3
             // 
@@ -301,7 +299,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(430, 401);
             this.panel2.TabIndex = 7;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel5
             // 
@@ -500,8 +497,10 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Robot Controller";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
