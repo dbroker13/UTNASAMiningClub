@@ -29,6 +29,9 @@ namespace NasaRobot
             connectSocket();
         }
 
+        /// <summary>
+        /// Establishes a socket connection with the wifi chip
+        /// </summary>
         private void connectSocket()
         {
             string board = "192.168.69.120"; //make sure to update this once IP is made static
