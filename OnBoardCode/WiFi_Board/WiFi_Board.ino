@@ -19,10 +19,6 @@
 
 //how many clients should be able to telnet to this ESP8266
 #define MAX_SRV_CLIENTS 1
-//const char* ssid = "nachowifi";
-//const char* password = "Calicojack16";
-//const char*  ssid = "DirtyDingoPalace";
-//const char* password ="fuckpike2018";
 const char*  ssid = "NASATeam";
 const char* password ="EECS6900";
 
