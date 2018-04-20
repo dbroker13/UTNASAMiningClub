@@ -66,10 +66,15 @@
             this.btnUp = new System.Windows.Forms.Button();
             this.cmbActuatorSelect = new System.Windows.Forms.ComboBox();
             this.lblDisplay = new System.Windows.Forms.Label();
+            this.pnlCompControl = new System.Windows.Forms.Panel();
+            this.pnlXboxControl = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.pnlCompControl.SuspendLayout();
+            this.pnlXboxControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnForward
@@ -486,15 +491,39 @@
             this.lblDisplay.TabIndex = 8;
             this.lblDisplay.Text = "Program Status";
             // 
+            // pnlCompControl
+            // 
+            this.pnlCompControl.Controls.Add(this.panel1);
+            this.pnlCompControl.Controls.Add(this.panel2);
+            this.pnlCompControl.Location = new System.Drawing.Point(0, 0);
+            this.pnlCompControl.Name = "pnlCompControl";
+            this.pnlCompControl.Size = new System.Drawing.Size(910, 435);
+            this.pnlCompControl.TabIndex = 9;
+            // 
+            // pnlXboxControl
+            // 
+            this.pnlXboxControl.Controls.Add(this.panel7);
+            this.pnlXboxControl.Location = new System.Drawing.Point(0, 0);
+            this.pnlXboxControl.Name = "pnlXboxControl";
+            this.pnlXboxControl.Size = new System.Drawing.Size(910, 435);
+            this.pnlXboxControl.TabIndex = 15;
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(360, 193);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 100);
+            this.panel7.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(910, 470);
+            this.Controls.Add(this.pnlXboxControl);
+            this.Controls.Add(this.pnlCompControl);
             this.Controls.Add(this.lblDisplay);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -509,6 +538,8 @@
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.pnlCompControl.ResumeLayout(false);
+            this.pnlXboxControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -553,6 +584,9 @@
         private System.Windows.Forms.RadioButton rbActQuarter;
         private System.Windows.Forms.RadioButton rbActEighth;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnlCompControl;
+        private System.Windows.Forms.Panel pnlXboxControl;
+        private System.Windows.Forms.Panel panel7;
     }
 }
 
