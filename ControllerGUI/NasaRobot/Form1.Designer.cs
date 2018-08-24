@@ -495,17 +495,17 @@
             // 
             this.pnlCompControl.Controls.Add(this.panel1);
             this.pnlCompControl.Controls.Add(this.panel2);
-            this.pnlCompControl.Location = new System.Drawing.Point(0, 0);
+            this.pnlCompControl.Location = new System.Drawing.Point(0, 1);
             this.pnlCompControl.Name = "pnlCompControl";
-            this.pnlCompControl.Size = new System.Drawing.Size(910, 435);
+            this.pnlCompControl.Size = new System.Drawing.Size(910, 446);
             this.pnlCompControl.TabIndex = 9;
             // 
             // pnlXboxControl
             // 
             this.pnlXboxControl.Controls.Add(this.panel7);
-            this.pnlXboxControl.Location = new System.Drawing.Point(0, 0);
+            this.pnlXboxControl.Location = new System.Drawing.Point(0, 437);
             this.pnlXboxControl.Name = "pnlXboxControl";
-            this.pnlXboxControl.Size = new System.Drawing.Size(910, 435);
+            this.pnlXboxControl.Size = new System.Drawing.Size(910, 10);
             this.pnlXboxControl.TabIndex = 15;
             // 
             // panel7
@@ -514,13 +514,14 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(200, 100);
             this.panel7.TabIndex = 0;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(910, 470);
+            this.ClientSize = new System.Drawing.Size(910, 488);
             this.Controls.Add(this.pnlXboxControl);
             this.Controls.Add(this.pnlCompControl);
             this.Controls.Add(this.lblDisplay);
