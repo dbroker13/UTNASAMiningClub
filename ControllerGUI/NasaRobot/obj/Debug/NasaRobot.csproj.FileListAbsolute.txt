@@ -1,0 +1,14 @@
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\bin\Debug\NasaRobot.exe.config
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\bin\Debug\NasaRobot.exe
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\bin\Debug\NasaRobot.pdb
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\bin\Debug\SharpDX.dll
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\bin\Debug\SharpDX.XInput.dll
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\bin\Debug\SharpDX.xml
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\bin\Debug\SharpDX.XInput.xml
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\obj\Debug\NasaRobot.csprojResolveAssemblyReference.cache
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\obj\Debug\NasaRobot.Form1.resources
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\obj\Debug\NasaRobot.Properties.Resources.resources
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\obj\Debug\NasaRobot.csproj.GenerateResource.Cache
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\obj\Debug\NasaRobot.csproj.CoreCompileInputs.cache
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\obj\Debug\NasaRobot.exe
+C:\Users\jjard\Documents\GitHub\UTNASAMiningClub\ControllerGUI\NasaRobot\obj\Debug\NasaRobot.pdb

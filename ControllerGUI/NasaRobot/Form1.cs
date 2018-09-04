@@ -38,7 +38,7 @@ namespace NasaRobot
             cmbMotorSelect.SelectedIndex = 0;
             cmbActuatorSelect.SelectedIndex = 0;
 
-            //connectSocket();
+            connectSocket();
 
             if (useController)
             {
@@ -154,20 +154,22 @@ namespace NasaRobot
             NetworkStream serverStream = sock.GetStream();
             //calculate actual value to pass to motor. value of 64 is stop, > 64 is forward, < 64 is backwards. range is 0-128
             value = (value * ((addValue) ? 1 : -1)) + 64; 
-            byte[] outStream = System.Text.Encoding.ASCII.GetBytes(deviceName + ", " + command + ", " + value + "\x04");
+            byte[] outStream = System.Text.Encoding.ASCII.GetBytes(deviceName + ", " + command + ", " + value + ":!");
+            string sendData = System.Text.Encoding.ASCII.GetString(outStream);
+
             serverStream.Write(outStream, 0, outStream.Length);
             serverStream.Flush();
 
             //TODO: have this recieve command back
-            //TODO: after recieving, compare to sent message to check for transmission errors
+            //TODO: after recieving, compare to sent message to check for transmission errors 
             //TODO: implement timeout on recieving to ensure connection isnt lost
 
             //read back buffer. We were getting issues, so commented out for now
-            /*byte[] inStream = new byte[99999];
+            byte[] inStream = new byte[99999];
             serverStream.Read(inStream, 0, (int)sock.ReceiveBufferSize);
             string returnData = System.Text.Encoding.ASCII.GetString(inStream);
             lblDisplay.Text = returnData;
-            */
+            
 
         }
 
@@ -332,6 +334,11 @@ namespace NasaRobot
             {
                 sendMessage(cmbMotorSelect.Text, "Stop", 64);
             }
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
